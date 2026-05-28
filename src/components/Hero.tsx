@@ -2,9 +2,9 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 import { agency } from "../data";
 
 const proofPills = [
-  "Template-first workflow",
-  "Fast delivery",
-  "White-label ready",
+  "For reseller agencies",
+  "White-label fulfillment",
+  "Structured intake",
 ];
 
 function BrowserMockup({
@@ -28,7 +28,7 @@ function BrowserMockup({
         <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
         <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
         <div className="flex-1 mx-3 h-4 bg-gray-200 rounded-full text-[9px] text-gray-400 flex items-center px-2 truncate">
-          launchcraft.co/{label.toLowerCase().replace(/\s/g, "-")}
+          launchlayer.in/{label.toLowerCase().replace(/\s/g, "-")}
         </div>
       </div>
       {/* Page content preview */}
@@ -87,7 +87,7 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-24 pb-20 lg:pt-32 lg:pb-28">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left — copy */}
+          {/* Left - copy */}
           <div className="space-y-8">
             {/* Proof pills */}
             <div className="flex flex-wrap gap-2">
@@ -104,15 +104,16 @@ export default function Hero() {
 
             <div className="space-y-5">
               <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white leading-[1.1] tracking-tight">
-                Launch better websites
+                Sell more websites
                 <br />
-                <span className="text-blue-400">for your business</span>
+                <span className="text-cyan-300">without building</span>
                 <br />
-                clients
+                every site yourself
               </h1>
               <p className="text-lg text-gray-400 leading-relaxed max-w-md">
-                A productized website partner for agencies that need fast, polished and
-                conversion-ready client websites — without the project management overhead.
+                LaunchLayer Studio gives reseller agencies a white-label production
+                engine: template demos, structured client intake, developer-ready briefs
+                and fast launch support under your brand.
               </p>
             </div>
 
@@ -121,23 +122,23 @@ export default function Hero() {
                 href={agency.bookingUrl || "#contact"}
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3.5 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-blue-600/30 hover:-translate-y-0.5"
               >
-                Book Consultation
+                Start Agency Intake
                 <ArrowRight size={16} />
               </a>
               <a
                 href="#demos"
                 className="inline-flex items-center gap-2 border border-white/20 text-white hover:bg-white/10 font-semibold px-6 py-3.5 rounded-xl transition-all duration-200"
               >
-                View Website Demos
+                View Production System
               </a>
             </div>
 
             {/* Mini metrics row */}
             <div className="flex gap-8 pt-2">
               {[
-                { v: "120+", l: "Sites Launched" },
-                { v: "14d", l: "Avg. to Live" },
-                { v: "98%", l: "Satisfaction" },
+                { v: "50+", l: "Agency Partners" },
+                { v: "1-3d", l: "Delivery Window" },
+                { v: "10", l: "Template Tracks" },
               ].map((m) => (
                 <div key={m.l}>
                   <div className="text-2xl font-bold text-white">{m.v}</div>
@@ -147,35 +148,35 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right — layered browser mockups */}
+          {/* Right - layered browser mockups */}
           <div className="relative h-[480px] lg:h-[520px] hidden md:block">
             {/* Back card */}
             <BrowserMockup
               className="absolute top-0 right-0 w-72 rotate-3 opacity-60 scale-90"
-              color="#00D084"
-              label="Clinic"
+              color="#06B6D4"
+              label="Intake Flow"
               bars={[50, 25, 25]}
             />
             {/* Middle card */}
             <BrowserMockup
               className="absolute top-8 right-8 w-72 -rotate-1 opacity-80 scale-95"
-              color="#FF6B35"
-              label="Restaurant"
+              color="#A855F7"
+              label="Template Library"
               bars={[40, 30, 30]}
             />
-            {/* Front card — main */}
+            {/* Front card - main */}
             <BrowserMockup
               className="absolute top-16 right-16 w-80 z-10"
-              color="#0066FF"
-              label="Local Business"
+              color="#2563EB"
+              label="Agency Portal"
               bars={[60, 40]}
             />
             {/* Floating badge */}
-            <div className="absolute bottom-8 left-0 z-20 bg-white rounded-xl shadow-xl px-4 py-3 border border-gray-100">
-              <div className="text-xs text-gray-500 mb-0.5">Latest delivery</div>
-              <div className="text-sm font-bold text-gray-900">Cascade Plumbing</div>
+            <div className="absolute bottom-8 right-0 z-30 bg-white rounded-xl shadow-xl px-4 py-3 border border-gray-100">
+              <div className="text-xs text-gray-500 mb-0.5">Latest handoff</div>
+              <div className="text-sm font-bold text-gray-900">ScaleMint Media</div>
               <div className="text-xs text-emerald-600 font-medium mt-0.5">
-                Live in 11 days ✓
+                Client site live in 2 days
               </div>
             </div>
           </div>

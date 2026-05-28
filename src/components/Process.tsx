@@ -17,12 +17,12 @@ export default function Process() {
             </h2>
           </div>
           <p className="text-lg text-gray-400 leading-relaxed lg:max-w-md lg:ml-auto">
-            A predictable, repeatable production process that works the same for every client
-            — whether you're reselling one site a month or ten.
+            A predictable, repeatable production process that works the same for every client,
+            whether you're reselling one site a month or ten.
           </p>
         </div>
 
-        {/* Steps — horizontal timeline for desktop */}
+        {/* Steps - horizontal timeline for desktop */}
         <div className="relative">
           {/* Connecting line */}
           <div className="hidden lg:block absolute top-8 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
@@ -57,7 +57,7 @@ export default function Process() {
         {/* CTA */}
         <div className="mt-20 text-center">
           <a
-            href="#contact"
+            href="/intake"
             className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-blue-600/30 text-base"
           >
             Start Your First Project

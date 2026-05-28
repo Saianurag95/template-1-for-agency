@@ -21,13 +21,13 @@ export default function BookingCTA() {
           Ready to Ship?
         </div>
         <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-          Start your client's next website
+          Start your next website
           <br />
-          this week
+          project today
         </h2>
         <p className="text-xl text-blue-100 mb-10 max-w-xl mx-auto">
-          Book a 30-minute consultation. We'll confirm your client's niche, recommend the right
-          template, and scope the project on the same call.
+          Submit your project intake, choose the template style and give us the content needed
+          to prepare a fast, polished website preview.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -36,7 +36,7 @@ export default function BookingCTA() {
             className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 hover:bg-blue-50 font-bold px-8 py-4 rounded-xl transition-all duration-200 hover:shadow-xl text-base"
           >
             <Calendar size={18} />
-            Book Free Consultation
+            Start Project Intake
             <ArrowRight size={15} />
           </a>
           {agency.whatsapp && agency.whatsapp !== "{{whatsapp_number}}" && (
@@ -62,7 +62,7 @@ export default function BookingCTA() {
         </div>
 
         <p className="text-sm text-blue-200/70 mt-8">
-          No commitment required. We'll scope the project honestly — and tell you if it's not the right fit.
+          No commitment required. We'll scope the project honestly and tell you if it's not the right fit.
         </p>
       </div>
     </section>

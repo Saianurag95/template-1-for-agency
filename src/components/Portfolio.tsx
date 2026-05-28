@@ -17,7 +17,7 @@ export default function Portfolio() {
               <span className="text-gray-400">Real results.</span>
             </h2>
             <p className="text-lg text-gray-500 leading-relaxed lg:ml-auto lg:max-w-sm">
-              Here's what agencies using our service have shipped for their clients — and what it
+              Here's what agencies using our service have shipped for their clients and what it
               meant for their business.
             </p>
           </div>

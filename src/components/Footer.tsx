@@ -14,7 +14,6 @@ export default function Footer() {
     <footer className="bg-gray-950 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
-          {/* Brand column */}
           <div className="col-span-2 lg:col-span-2">
             <a href="#" className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -38,7 +37,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Link columns */}
           {Object.entries(footerLinks).map(([heading, links]) => (
             <div key={heading}>
               <div className="text-xs font-semibold text-gray-400 tracking-widest uppercase mb-4">
@@ -60,10 +58,9 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Bottom bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-600">
-            © {year} {agency.name}. All rights reserved.
+            Copyright {year} {agency.name}. All rights reserved.
           </p>
           <div className="flex gap-6">
             {["Privacy Policy", "Terms of Service"].map((l) => (

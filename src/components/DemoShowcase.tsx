@@ -1,5 +1,5 @@
 import { ExternalLink } from "lucide-react";
-import { demos } from "../data";
+import { agency, demos } from "../data";
 
 function DemoCard({
   niche,
@@ -21,7 +21,7 @@ function DemoCard({
             <div className="w-2 h-2 rounded-full bg-green-400" />
           </div>
           <div className="flex-1 h-3 bg-gray-100 rounded text-[8px] text-gray-400 flex items-center px-2 ml-1">
-            demo.launchcraft.co/{niche.toLowerCase().replace(/\s/g, "-")}
+            demos.nexawebstudio.in/{niche.toLowerCase().replace(/\s/g, "-")}
           </div>
         </div>
 
@@ -83,11 +83,11 @@ export default function DemoShowcase() {
             Template Library
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Pick a niche. We'll handle the rest.
+            Pick a website style. We'll handle the rest.
           </h2>
           <p className="text-lg text-gray-500">
-            Six production-ready website templates built for the niches your clients are actually in.
-            Each one is customised to your client's brand, not just swapped out.
+            Production-ready website styles for the businesses your clients actually serve.
+            Each one is customized to the client's brand, content and calls to action.
           </p>
         </div>
 
@@ -101,13 +101,13 @@ export default function DemoShowcase() {
         {/* CTA below grid */}
         <div className="mt-12 text-center">
           <p className="text-sm text-gray-500 mb-4">
-            Don't see your client's niche? We build custom layouts too.
+            Don't see your client's niche? Start an intake and we will recommend the closest production template.
           </p>
           <a
-            href="#contact"
+            href={agency.bookingUrl}
             className="inline-flex items-center gap-2 border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200"
           >
-            Ask About Custom Niches
+            Start Project Intake
           </a>
         </div>
       </div>

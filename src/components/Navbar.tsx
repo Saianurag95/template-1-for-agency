@@ -71,7 +71,7 @@ export default function Navbar() {
               href={agency.bookingUrl || "#contact"}
               className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-all duration-200 hover:shadow-md hover:shadow-blue-600/25"
             >
-              Book Consultation
+              Start Intake
             </a>
           </div>
 
@@ -110,7 +110,7 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
             className="inline-flex justify-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors mt-2"
           >
-            Book Consultation
+            Start Intake
           </a>
         </div>
       </div>

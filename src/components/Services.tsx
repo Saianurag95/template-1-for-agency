@@ -27,12 +27,12 @@ export default function Services() {
             </h2>
           </div>
           <p className="text-lg text-gray-500 leading-relaxed lg:max-w-md lg:ml-auto">
-            Every service we offer is designed to remove friction from your delivery workflow — so
+            Every service we offer is designed to remove friction from your delivery workflow, so
             you spend less time wrangling scope and more time growing your client base.
           </p>
         </div>
 
-        {/* Services grid — varied layout */}
+        {/* Services grid - varied layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-100 rounded-2xl overflow-hidden border border-gray-100">
           {services.map((s, i) => {
             const Icon = iconMap[s.icon];

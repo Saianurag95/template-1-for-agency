@@ -46,7 +46,7 @@ export default function Contact() {
     <section id="contact" className="bg-gray-50 py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left — info */}
+          {/* Left - info */}
           <div>
             <div className="text-xs font-semibold text-blue-600 tracking-widest uppercase mb-4">
               Get In Touch
@@ -65,7 +65,7 @@ export default function Contact() {
               {[
                 { Icon: Mail, label: "Email", value: agency.email },
                 { Icon: Phone, label: "Phone", value: agency.phone },
-                { Icon: MapPin, label: "Location", value: agency.location !== "{{agency_location}}" ? agency.location : "Remote — worldwide" },
+                { Icon: MapPin, label: "Location", value: agency.location !== "{{agency_location}}" ? agency.location : "Remote - worldwide" },
               ].map(({ Icon, label, value }) => (
                 <div key={label} className="flex items-center gap-4">
                   <div className="w-10 h-10 bg-white border border-gray-200 rounded-xl flex items-center justify-center shrink-0">
@@ -80,7 +80,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right — form */}
+          {/* Right - form */}
           <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
             {submitted ? (
               <div className="text-center py-12">
@@ -105,7 +105,7 @@ export default function Contact() {
                       required
                       value={form.name}
                       onChange={handleChange}
-                      placeholder="Jane Smith"
+                      placeholder="Rahul Mehta"
                       className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                     />
                   </div>
@@ -119,7 +119,7 @@ export default function Contact() {
                       required
                       value={form.email}
                       onChange={handleChange}
-                      placeholder="jane@agency.co"
+                      placeholder="rahul@agency.in"
                       className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                     />
                   </div>

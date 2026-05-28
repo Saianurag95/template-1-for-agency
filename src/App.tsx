@@ -9,10 +9,17 @@ import Portfolio from "./components/Portfolio";
 import BookingCTA from "./components/BookingCTA";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import IntakePage from "./components/IntakePage";
+import ScrollReveal from "./components/ScrollReveal";
 
 export default function App() {
+  if (window.location.pathname === "/intake") {
+    return <IntakePage />;
+  }
+
   return (
     <div className="min-h-screen">
+      <ScrollReveal />
       <Navbar />
       <Hero />
       <ProofBand />
