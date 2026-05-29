@@ -21,6 +21,44 @@ export const metrics = [
   { value: "10", label: "Agency Templates Ready" },
 ];
 
+export const trustLogos = [
+  "NorthStar",
+  "ScaleMint",
+  "WebBridge",
+  "AdVantage",
+  "GrowthMint",
+  "LocalReach",
+];
+
+export const specialities = [
+  "Template-first production",
+  "AI-assisted content briefs",
+  "White-label handoff",
+  "Razorpay-only payment",
+  "1-3 day delivery system",
+  "Revision-controlled workflow",
+  "Agency-ready demos",
+  "Launch support",
+];
+
+export const resultCards = [
+  {
+    value: "3-5",
+    label: "sites/day/developer",
+    text: "Built around reusable sections, clean intake data and template-specific customization.",
+  },
+  {
+    value: "70%",
+    label: "faster delivery loop",
+    text: "Agencies avoid messy client back-and-forth by collecting details before production starts.",
+  },
+  {
+    value: "24h",
+    label: "starter launch target",
+    text: "For simple brochure websites with complete content, logo and selected template ID.",
+  },
+];
+
 export const services = [
   {
     id: 1,
@@ -293,5 +331,26 @@ export const portfolioItems = [
     result: "Added website packages as a new recurring service line",
     package: "Premium",
     color: "#0F172A",
+  },
+];
+
+export const caseStudies = [
+  {
+    title: "Agency website + intake funnel",
+    stat: "2 days",
+    result: "Reseller agency went live with a public website, template showcase and structured order flow.",
+    tone: "#2563EB",
+  },
+  {
+    title: "Local business launch",
+    stat: "24h",
+    result: "Client selected a demo, submitted assets and received a branded preview the next business day.",
+    tone: "#10B981",
+  },
+  {
+    title: "AI-assisted content pass",
+    stat: "80%",
+    result: "Missing page copy was converted into polished service sections without delaying the build.",
+    tone: "#F59E0B",
   },
 ];
