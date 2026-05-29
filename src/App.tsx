@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ProofBand from "./components/ProofBand";
@@ -26,7 +27,22 @@ function currentRoute() {
 }
 
 export default function App() {
-  const route = currentRoute();
+  const [route, setRoute] = useState(currentRoute());
+
+  useEffect(() => {
+    const updateRoute = () => {
+      setRoute(currentRoute());
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    window.addEventListener("hashchange", updateRoute);
+    window.addEventListener("popstate", updateRoute);
+
+    return () => {
+      window.removeEventListener("hashchange", updateRoute);
+      window.removeEventListener("popstate", updateRoute);
+    };
+  }, []);
 
   if (route === "payment-confirmation") {
     return <PaymentConfirmation />;
