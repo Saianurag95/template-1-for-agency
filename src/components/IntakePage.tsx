@@ -33,6 +33,7 @@ const packages = [
   {
     name: "Starter Website",
     price: "Rs 6,000",
+    hostingPrice: "Rs 6,500 with domain + hosting",
     pages: "5 pages",
     delivery: "1 business day",
     revisions: "2 revisions",
@@ -40,6 +41,7 @@ const packages = [
   {
     name: "Business Website",
     price: "Rs 8,000",
+    hostingPrice: "Rs 8,700 with domain + hosting",
     pages: "7 pages",
     delivery: "2 business days",
     revisions: "4 revisions",
@@ -48,6 +50,7 @@ const packages = [
   {
     name: "Premium Growth Website",
     price: "Rs 12,000",
+    hostingPrice: "Rs 12,900 with domain + hosting",
     pages: "12 pages",
     delivery: "3 business days",
     revisions: "6 revisions",
@@ -451,6 +454,7 @@ function StepContent({
             )}
             <div className="text-lg font-bold text-white">{pkg.name}</div>
             <div className="mt-4 text-3xl font-black text-white">{pkg.price}</div>
+            <div className="mt-2 text-sm font-semibold text-cyan-100">{pkg.hostingPrice}</div>
             <div className="mt-1 text-xs font-semibold uppercase tracking-wide text-cyan-200">
               Demo pricing
             </div>
@@ -469,13 +473,13 @@ function StepContent({
     return (
       <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
         <div className="space-y-4">
-          {["50 percent advance", "30 percent after first preview", "20 percent before final deployment"].map((milestone, index) => (
+          {["100 percent online payment after intake submission", "Razorpay confirmation before production starts", "No other payment mode accepted"].map((milestone, index) => (
             <div key={milestone} className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.05] p-4">
               <div>
                 <div className="font-semibold text-white">{milestone}</div>
                 <div className="text-xs text-slate-500">Milestone {index + 1}</div>
               </div>
-              <span className="rounded-full bg-white/10 px-3 py-1 text-xs text-slate-300">Frontend only</span>
+              <span className="rounded-full bg-white/10 px-3 py-1 text-xs text-slate-300">Online only</span>
             </div>
           ))}
         </div>
@@ -489,7 +493,7 @@ function StepContent({
               onChange={(event) => updateForm("paymentConfirmed", event.target.checked)}
               className="mt-1 h-4 w-4 rounded border-white/20 bg-slate-900"
             />
-            I confirm the client understands this is demo pricing and payment gateway will be connected later.
+            I confirm payment must be completed online through Razorpay. If we arrange domain and hosting, Rs 500 to Rs 900 is added automatically based on the package.
           </label>
         </div>
       </div>
