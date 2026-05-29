@@ -1,4 +1,4 @@
-import { caseStudies, portfolioItems, resultCards, testimonials } from "../data";
+import { portfolioItems, testimonials } from "../data";
 import { Quote } from "lucide-react";
 
 export default function Portfolio() {
@@ -21,16 +21,6 @@ export default function Portfolio() {
               meant for their business.
             </p>
           </div>
-        </div>
-
-        <div className="mb-20 grid gap-4 md:grid-cols-3">
-          {resultCards.map((card) => (
-            <div key={card.label} className="rounded-3xl bg-gray-950 p-7 text-white">
-              <div className="mb-2 text-5xl font-black text-cyan-300">{card.value}</div>
-              <div className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-white/50">{card.label}</div>
-              <p className="text-sm leading-6 text-white/60">{card.text}</p>
-            </div>
-          ))}
         </div>
 
         {/* Asymmetric portfolio grid */}
@@ -62,24 +52,6 @@ export default function Portfolio() {
                 <div className="text-xs text-gray-500 mb-1">Outcome</div>
                 <div className="text-sm font-bold text-gray-900">{item.result}</div>
               </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mb-20 grid gap-5 lg:grid-cols-3">
-          {caseStudies.map((item) => (
-            <div
-              key={item.title}
-              className="group rounded-3xl border border-gray-100 bg-gray-50 p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-gray-200"
-            >
-              <div
-                className="mb-6 inline-flex rounded-full px-4 py-2 text-sm font-black text-white"
-                style={{ backgroundColor: item.tone }}
-              >
-                {item.stat}
-              </div>
-              <h3 className="mb-3 text-xl font-black text-gray-950">{item.title}</h3>
-              <p className="text-sm leading-6 text-gray-500">{item.result}</p>
             </div>
           ))}
         </div>

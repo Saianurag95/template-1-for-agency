@@ -5,13 +5,6 @@ const proofPills = [
   "For reseller agencies",
   "White-label fulfillment",
   "Structured intake",
-  "Razorpay online payment",
-];
-
-const floatingProof = [
-  { label: "Websites Delivered", value: "200+" },
-  { label: "Delivery Window", value: "1-3d" },
-  { label: "Starting", value: "Rs 6,000" },
 ];
 
 function BrowserMockup({
@@ -110,14 +103,12 @@ export default function Hero() {
             </div>
 
             <div className="space-y-5">
-              <h1 className="text-5xl md:text-7xl lg:text-[6rem] font-black text-white leading-[0.88] tracking-tight">
-                The
+              <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white leading-[1.1] tracking-tight">
+                Sell more websites
                 <br />
-                Best
+                <span className="text-cyan-300">without building</span>
                 <br />
-                <span className="text-cyan-300">Website</span>
-                <br />
-                Engine.
+                every site yourself
               </h1>
               <p className="text-lg text-gray-400 leading-relaxed max-w-md">
                 LaunchLayer Studio gives reseller agencies a white-label production
@@ -187,18 +178,6 @@ export default function Hero() {
               <div className="text-xs text-emerald-600 font-medium mt-0.5">
                 Client site live in 2 days
               </div>
-            </div>
-            <div className="absolute left-0 bottom-20 z-30 grid gap-2">
-              {floatingProof.map((item, index) => (
-                <div
-                  key={item.label}
-                  className="rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-white shadow-2xl backdrop-blur-xl"
-                  style={{ transform: `translateX(${index * 18}px)` }}
-                >
-                  <div className="text-2xl font-black">{item.value}</div>
-                  <div className="text-[11px] text-white/60">{item.label}</div>
-                </div>
-              ))}
             </div>
           </div>
         </div>

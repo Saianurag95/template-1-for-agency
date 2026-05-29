@@ -1,5 +1,5 @@
 import { Layout, Zap, Monitor, RefreshCw, Search, Smartphone } from "lucide-react";
-import { services, specialities } from "../data";
+import { services } from "../data";
 
 const iconMap: Record<string, React.ElementType> = {
   Layout,
@@ -40,7 +40,7 @@ export default function Services() {
             return (
               <div
                 key={s.id}
-                className={`bg-white p-8 hover:bg-blue-50/50 transition-all duration-300 group hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-100 ${
+                className={`bg-white p-8 hover:bg-blue-50/50 transition-colors duration-200 group ${
                   isLarge ? "lg:col-span-1" : ""
                 }`}
               >
@@ -59,35 +59,9 @@ export default function Services() {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{s.title}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">{s.description}</p>
-                <div className="mt-6 text-sm font-bold text-blue-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  Learn more
-                </div>
               </div>
             );
           })}
-        </div>
-
-        <div className="mt-20 rounded-3xl bg-gray-950 p-8 lg:p-10">
-          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-            <div>
-              <div className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-cyan-300">
-                Our Specialities
-              </div>
-              <h3 className="text-3xl font-black text-white">
-                Built like a production system, not a one-off agency site.
-              </h3>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              {specialities.map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-white/75"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>
