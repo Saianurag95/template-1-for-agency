@@ -5,7 +5,7 @@ export const agency = {
   tagline: "White-label website production for reseller agencies.",
   location: "Hyderabad, India",
   offer: "Template-first website delivery engine for agencies that need fast, reliable fulfillment under their own brand.",
-  bookingUrl: "/intake",
+  bookingUrl: "#intake",
   whatsapp: "+91 98765 43210",
   email: "partners@launchlayer.in",
   phone: "+91 98765 43210",
@@ -80,7 +80,7 @@ export const demos = [
     packageFit: "Business",
     color: "#7C3AED",
     accentColor: "#F3E8FF",
-    previewUrl: "/intake",
+    previewUrl: "#intake",
   },
   {
     id: 2,
@@ -89,7 +89,7 @@ export const demos = [
     packageFit: "Business or Premium",
     color: "#06B6D4",
     accentColor: "#ECFEFF",
-    previewUrl: "/intake",
+    previewUrl: "#intake",
   },
   {
     id: 3,
@@ -98,7 +98,7 @@ export const demos = [
     packageFit: "Premium",
     color: "#F59E0B",
     accentColor: "#FFFBEB",
-    previewUrl: "/intake",
+    previewUrl: "#intake",
   },
   {
     id: 4,
@@ -107,7 +107,7 @@ export const demos = [
     packageFit: "Business or Premium",
     color: "#0F172A",
     accentColor: "#E0E7FF",
-    previewUrl: "/intake",
+    previewUrl: "#intake",
   },
   {
     id: 5,
@@ -116,7 +116,7 @@ export const demos = [
     packageFit: "Business",
     color: "#DB2777",
     accentColor: "#FCE7F3",
-    previewUrl: "/intake",
+    previewUrl: "#intake",
   },
   {
     id: 6,
@@ -125,7 +125,7 @@ export const demos = [
     packageFit: "Premium",
     color: "#111827",
     accentColor: "#F3F4F6",
-    previewUrl: "/intake",
+    previewUrl: "#intake",
   },
 ];
 

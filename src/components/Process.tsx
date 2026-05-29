@@ -57,7 +57,7 @@ export default function Process() {
         {/* CTA */}
         <div className="mt-20 text-center">
           <a
-            href="/intake"
+            href="#intake"
             className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-blue-600/30 text-base"
           >
             Start Your First Project

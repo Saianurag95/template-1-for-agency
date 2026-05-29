@@ -19,7 +19,7 @@ export default function PaymentConfirmation() {
           <FileText className="w-12 h-12 mx-auto mb-4 text-blue-300" />
           <h1 className="text-3xl font-bold mb-3">No payment details found</h1>
           <p className="text-slate-400 mb-6">Please submit the intake form first, then complete payment.</p>
-          <a href="./intake" className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-5 py-3 font-semibold">
+          <a href="#intake" className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-5 py-3 font-semibold">
             Go to Intake
           </a>
         </div>

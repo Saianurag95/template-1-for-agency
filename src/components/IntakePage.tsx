@@ -580,7 +580,7 @@ export default function IntakePage() {
 
       <div className="relative mx-auto max-w-7xl px-6 py-8 lg:px-8">
         <div className="mb-10 flex flex-wrap items-center justify-between gap-4">
-          <a href="/" className="inline-flex items-center gap-2 text-sm font-semibold text-slate-300 transition hover:text-white">
+          <a href={import.meta.env.BASE_URL} className="inline-flex items-center gap-2 text-sm font-semibold text-slate-300 transition hover:text-white">
             <ArrowLeft size={16} />
             Back to main site
           </a>

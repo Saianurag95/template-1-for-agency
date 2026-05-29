@@ -128,7 +128,7 @@ export default function Packages() {
         </div>
 
         <p className="text-center text-sm text-gray-400 mt-8">
-          Need a larger scope? <a href="/intake" className="text-blue-600 hover:underline">Start the intake</a> and we will recommend the right production path.
+          Need a larger scope? <a href="#intake" className="text-blue-600 hover:underline">Start the intake</a> and we will recommend the right production path.
         </p>
       </div>
     </section>

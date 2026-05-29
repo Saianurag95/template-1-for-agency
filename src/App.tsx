@@ -13,12 +13,26 @@ import IntakePage from "./components/IntakePage";
 import PaymentConfirmation from "./components/PaymentConfirmation";
 import ScrollReveal from "./components/ScrollReveal";
 
+function currentRoute() {
+  if (window.location.hash === "#payment-confirmation") return "payment-confirmation";
+  if (window.location.hash === "#intake") return "intake";
+
+  const basePath = import.meta.env.BASE_URL === "/" ? "" : import.meta.env.BASE_URL.replace(/\/$/, "");
+  const path = window.location.pathname.replace(basePath, "") || "/";
+
+  if (path === "/payment-confirmation") return "payment-confirmation";
+  if (path === "/intake") return "intake";
+  return "home";
+}
+
 export default function App() {
-  if (window.location.hash === "#payment-confirmation" || window.location.pathname === "/payment-confirmation") {
+  const route = currentRoute();
+
+  if (route === "payment-confirmation") {
     return <PaymentConfirmation />;
   }
 
-  if (window.location.pathname === "/intake") {
+  if (route === "intake") {
     return <IntakePage />;
   }
 

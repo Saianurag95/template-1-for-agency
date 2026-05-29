@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 export default function ScrollReveal() {
   useEffect(() => {
-    if (window.location.pathname === "/intake") return;
+    if (window.location.hash === "#intake" || window.location.pathname.endsWith("/intake")) return;
 
     const revealNodes = new Set<Element>();
     document.querySelectorAll("section").forEach((section) => revealNodes.add(section));
