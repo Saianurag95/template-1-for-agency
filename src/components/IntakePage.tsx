@@ -13,6 +13,7 @@ import {
   UploadCloud,
 } from "lucide-react";
 import { agency } from "../data";
+import { submitIntakeWithRazorpay } from "../payments/razorpay";
 
 const steps = [
   "Business Information",
@@ -538,6 +539,20 @@ export default function IntakePage() {
   const canContinue = missing.length === 0;
   const progress = useMemo(() => Math.round(((active + 1) / steps.length) * 100), [active]);
   const isStepComplete = (index: number) => missingFields(index, form, selectedPackage).length === 0;
+  const selectedPkg = packages.find((pkg) => pkg.name === selectedPackage);
+
+  const handlePaymentSubmit = () => {
+    submitIntakeWithRazorpay({
+      templateId: form.templateId || "AG-MOD-01",
+      formData: form as unknown as Record<string, unknown>,
+      packageName: selectedPkg?.name || selectedPackage || "Starter Website",
+      packagePrice: selectedPkg?.price,
+      customerName: form.contactPerson,
+      customerEmail: form.email,
+      customerPhone: form.phone,
+      businessName: form.businessName,
+    }).catch(() => setActive(steps.length - 1));
+  };
   const canOpenStep = (index: number) => {
     if (index <= active) {
       return true;
@@ -679,14 +694,17 @@ export default function IntakePage() {
               </button>
               <button
                 onClick={() => {
-                  if (canContinue) {
-                    setActive((value) => Math.min(steps.length - 1, value + 1));
+                  if (!canContinue) return;
+                  if (active === steps.length - 1) {
+                    handlePaymentSubmit();
+                    return;
                   }
+                  setActive((value) => Math.min(steps.length - 1, value + 1));
                 }}
                 disabled={!canContinue}
                 className="inline-flex items-center justify-center gap-2 rounded-2xl bg-cyan-300 px-6 py-3 font-black text-slate-950 transition hover:bg-cyan-200 disabled:cursor-not-allowed disabled:bg-slate-700 disabled:text-slate-400"
               >
-                {active === steps.length - 1 ? "Finish Review" : "Save and Continue"}
+                {active === steps.length - 1 ? "Pay with Razorpay" : "Save and Continue"}
                 <ArrowRight size={16} />
               </button>
             </div>

@@ -10,9 +10,14 @@ import BookingCTA from "./components/BookingCTA";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import IntakePage from "./components/IntakePage";
+import PaymentConfirmation from "./components/PaymentConfirmation";
 import ScrollReveal from "./components/ScrollReveal";
 
 export default function App() {
+  if (window.location.pathname === "/payment-confirmation") {
+    return <PaymentConfirmation />;
+  }
+
   if (window.location.pathname === "/intake") {
     return <IntakePage />;
   }
