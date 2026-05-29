@@ -14,7 +14,7 @@ import PaymentConfirmation from "./components/PaymentConfirmation";
 import ScrollReveal from "./components/ScrollReveal";
 
 export default function App() {
-  if (window.location.pathname === "/payment-confirmation") {
+  if (window.location.hash === "#payment-confirmation" || window.location.pathname === "/payment-confirmation") {
     return <PaymentConfirmation />;
   }
 
